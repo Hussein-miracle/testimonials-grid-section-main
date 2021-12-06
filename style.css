@@ -1,0 +1,231 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:  hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+.container{
+    margin: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(22vw,min-content));
+    grid-template-rows: repeat(2,45vh);
+    grid-gap: 20px;
+    justify-content: center;
+    align-content: center;
+}
+.card{
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+
+}
+.card-1{
+    background-color: hsl(263, 55%, 52%);
+    position: relative;
+    grid-column: 1 / span 2;
+    grid-row: 1 / 2;
+    z-index: -2;
+}
+.card-1 .student-name,
+.card-2 .student-name,
+.card-4 .student-name{
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+.card-1 .testimonial-1,
+.card-2 .testimonial-1,
+.card-4 .testimonial-1{
+    color: hsl(0, 0%, 100%);
+    margin-bottom: .4rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.card-1 .testimonial-2,
+.card-2 .testimonial-2,
+.card-4 .testimonial-2{
+    color: hsla(0, 0%, 100%,.7);
+}
+
+.img-1{
+    border: 2px solid hsla(263, 55%, 52%,.4);
+}
+.card-1 .student-position,
+.card-2 .student-position,
+.card-4 .student-position{
+    color: hsla(0, 0%, 100%,.5);
+}
+.quote-img{
+    position: absolute;
+    right: 14%;
+    top: 0%;
+    z-index: -1;
+    height: 8rem;
+}
+.card-2{
+    background-color: hsl(217, 19%, 35%);
+    grid-column: 3 / 4;
+}
+.card-3{
+    background-color:  hsl(0, 0%, 100%);
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.card-4{
+    background-color: hsl(219, 29%, 14%);
+    grid-column: 2 / span 2;
+}
+.card-5{
+    
+    background-color: hsl(0, 0%, 100%);
+    grid-column: 4 / -1;
+    grid-row: 1 / -1;
+}
+
+.student-img{
+    border-radius: 50%;
+    object-fit: contain;
+    margin-right: 2rem;
+}
+
+.student-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+    
+}
+.img-cover{
+    z-index: 5;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 2px solid hsla(263, 55%, 52%,.4);
+}
+.card-3 .student-name,
+.card-5 .student-name{
+    color: hsl(217, 19%, 35%);
+    font-weight: 600;
+}
+.card-3 .student-position,
+.card-5 .student-position{
+    color: hsla(217, 19%, 35%,.5);
+}
+.card-3 .testimonial-1,
+.card-5 .testimonial-1{
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 1rem;
+    
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.card-3 .testimonial-2,
+.card-5 .testimonial-2{
+    color: hsla(217, 19%, 35%,.7);
+}
+
+@media (max-width:62.875em){
+    .container{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+    padding: 1rem;
+    }
+
+    .card{
+        width: 90vw;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        
+    }
+    .card:not(:last-of-type){
+        width: 90vw;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        
+    }
+    .card-1{
+        
+        height: 58vh;
+        font-weight: 200;
+    }
+    .card .testimonial-1{
+        font-weight: normal;
+        font-size: 1rem;
+    }
+    .card-2{
+        
+        height: 30vh;
+        font-weight: 200;
+    }
+    .card-3{
+        
+        height: 30vh;
+        font-weight: 200;
+    }
+    .card-4{
+        
+        height: 50vh;
+        font-weight: 200;
+    }
+    .card-5{
+        
+        height: 68vh;
+        font-weight: 200;
+    }
+}
+
+@media(max-width:22.5625em){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .card{
+        width: 98vw;
+        margin-bottom: 1rem;
+        
+    }
+    .card-1{
+        
+        height: 68vh;
+        font-weight: 200;
+    }
+    .card .testimonial-1{
+        font-weight: normal;
+        font-size: 1rem;
+    }
+    .card-2{
+        
+        height: 38vh;
+        font-weight: 200;
+    }
+    .card-3{
+        
+        height: 30vh;
+        font-weight: 200;
+    }
+    .card-4{
+        
+        height: 62vh;
+        font-weight: 200;
+    }
+    .card-5{
+        height: 78vh;
+        font-weight: 200;
+    }
+}
